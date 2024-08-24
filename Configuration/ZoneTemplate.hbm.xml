@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="QMud.Core" assembly="QMud">
+<class name="ZoneTemplate" table="zones" lazy="false">
+	<id name="Id" generator="assigned" />
+	<property name="Name" />
+	<property name="Width" />
+	<property name="Height" />
+</class>
+</hibernate-mapping>

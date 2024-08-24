@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="QMud.Core" assembly="QMud">
+<class name="ItemTemplate" table="items" lazy="false">
+	<id name="Id" generator="assigned" />
+	<property name="Article" />
+	<property name="Name" />
+	<property name="DbKeywords" column="Keywords" />
+	<property name="ShortDescription" column="ShortDesc" />
+	<property name="LongDescription" column="LongDesc" />
+</class>
+</hibernate-mapping>

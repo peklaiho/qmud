@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="QMud.Core" assembly="QMud">
+<class name="QExit" table="room_exits" lazy="false">
+	<id name="Id" generator="identity" />
+	<property name="FromId" />
+	<property name="ToId" />
+	<property name="Direction" />
+</class>
+</hibernate-mapping>

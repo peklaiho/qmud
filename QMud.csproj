@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15FAB152-4EE4-454F-9D49-43A3C91F9E30}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>QMud</RootNamespace>
+    <AssemblyName>QMud</AssemblyName>
+    <StartupObject>QMud.Core.Mud</StartupObject>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="MySql.Data">
+      <HintPath>Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>Lib\NHibernate.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Core\Act.cs" />
+    <Compile Include="Core\BitArray.cs" />
+    <Compile Include="Core\CharacterCreation.cs" />
+    <Compile Include="Core\Color.cs" />
+    <Compile Include="Core\ColorLoc.cs" />
+    <Compile Include="Core\CompositeKey.cs" />
+    <Compile Include="Core\Descriptor.cs" />
+    <Compile Include="Core\Directions.cs" />
+    <Compile Include="Core\EnumNames.cs" />
+    <Compile Include="Core\Find.cs" />
+    <Compile Include="Core\Genders.cs" />
+    <Compile Include="Core\Handler.cs" />
+    <Compile Include="Core\Item.cs" />
+    <Compile Include="Core\ItemTemplate.cs" />
+    <Compile Include="Core\Living.cs" />
+    <Compile Include="Core\Log.cs" />
+    <Compile Include="Core\Monster.cs" />
+    <Compile Include="Core\MonsterTemplate.cs" />
+    <Compile Include="Core\Network.cs" />
+    <Compile Include="Core\Player.cs" />
+    <Compile Include="Core\PlayerItem.cs" />
+    <Compile Include="Core\Random.cs" />
+    <Compile Include="Core\Room.cs" />
+    <Compile Include="Core\Updater.cs" />
+    <Compile Include="Core\Settings.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Core\World.cs" />
+    <Compile Include="Core\Zone.cs" />
+    <Compile Include="Database\Database.cs" />
+    <Compile Include="Database\DatabaseItem.cs" />
+    <Compile Include="Database\DatabaseMonster.cs" />
+    <Compile Include="Database\DatabasePlayer.cs" />
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\CmdColorPref.cs" />
+    <Compile Include="Commands\CmdComm.cs" />
+    <Compile Include="Commands\CmdCommands.cs" />
+    <Compile Include="Commands\CmdDiscard.cs" />
+    <Compile Include="Commands\CmdDrop.cs" />
+    <Compile Include="Commands\CmdEquipment.cs" />
+    <Compile Include="Commands\CmdGet.cs" />
+    <Compile Include="Commands\CmdGive.cs" />
+    <Compile Include="Commands\CmdGoto.cs" />
+    <Compile Include="Commands\CmdHelp.cs" />
+    <Compile Include="Commands\CmdInventory.cs" />
+    <Compile Include="Commands\CmdLoad.cs" />
+    <Compile Include="Commands\CmdLook.cs" />
+    <Compile Include="Commands\CmdMemory.cs" />
+    <Compile Include="Commands\CmdMove.cs" />
+    <Compile Include="Commands\CmdPreferences.cs" />
+    <Compile Include="Commands\CmdPut.cs" />
+    <Compile Include="Commands\CmdQuit.cs" />
+    <Compile Include="Commands\CmdRemove.cs" />
+    <Compile Include="Commands\CmdRepeat.cs" />
+    <Compile Include="Commands\CmdSave.cs" />
+    <Compile Include="Commands\CmdSearch.cs" />
+    <Compile Include="Commands\CmdShutdown.cs" />
+    <Compile Include="Commands\CmdStatus.cs" />
+    <Compile Include="Commands\CmdUptime.cs" />
+    <Compile Include="Commands\CmdVersion.cs" />
+    <Compile Include="Commands\CmdViewLog.cs" />
+    <Compile Include="Commands\CmdWear.cs" />
+    <Compile Include="Commands\CmdWho.cs" />
+    <Compile Include="Commands\CmdWhoAmI.cs" />
+    <Compile Include="Commands\CommandInterpreter.cs" />
+    <Compile Include="Core\Mud.cs" />
+    <Compile Include="Core\BodyPart.cs" />
+    <Compile Include="Commands\CmdHealth.cs" />
+    <Compile Include="Core\BodyParts.cs" />
+    <Compile Include="Core\Fight.cs" />
+    <Compile Include="Commands\CmdMap.cs" />
+    <Compile Include="Commands\CmdFight.cs" />
+    <Compile Include="Commands\CmdFlee.cs" />
+    <Compile Include="Core\Party.cs" />
+    <Compile Include="Commands\CmdParty.cs" />
+    <Compile Include="Core\SimpleZone.cs" />
+    <Compile Include="Core\MazeZone.cs" />
+    <Compile Include="Commands\CmdExplore.cs" />
+    <Compile Include="Core\RandomNameGenerator.cs" />
+    <Compile Include="Core\ZoneEntrance.cs" />
+    <Compile Include="Commands\CmdEnter.cs" />
+    <Compile Include="Core\ZoneTemplate.cs" />
+    <Compile Include="Database\DatabaseZone.cs" />
+    <Compile Include="Core\ZoneMonster.cs" />
+    <Compile Include="Core\FightActions.cs" />
+    <Compile Include="Commands\CmdHit.cs" />
+    <Compile Include="Commands\CmdCancel.cs" />
+    <Compile Include="Core\MonsterClass.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Database\" />
+    <Folder Include="Doc\" />
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Deployment.LinuxDeployData generateScript="False" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <None Include="Doc\TODO.txt" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\ItemTemplate.hbm.xml" />
+    <EmbeddedResource Include="Configuration\MonsterTemplate.hbm.xml" />
+    <EmbeddedResource Include="Configuration\Player.hbm.xml" />
+    <EmbeddedResource Include="Configuration\PlayerItem.hbm.xml" />
+    <EmbeddedResource Include="Configuration\ZoneTemplate.hbm.xml" />
+    <EmbeddedResource Include="Configuration\ZoneMonster.hbm.xml" />
+  </ItemGroup>
+</Project>
